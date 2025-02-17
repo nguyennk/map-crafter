@@ -43,7 +43,7 @@ public class MapCrafterCore : BaseSettingsPlugin<MapCrafterSettings>
     public int VisibleStashIndex = -1;
     public MapCrafterCore()
     {
-        Name = "Map Crafter";
+        Name = "NK Map Crafter";
     }
 
     public override bool Initialise()
