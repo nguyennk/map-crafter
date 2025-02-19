@@ -402,7 +402,7 @@ internal class ActionsHandler
         Main.LogMessage($"Want to corrupt {itemSorted.Count} items.");
 
         var stashInventories = Main.GameController.Game.IngameState.IngameUi.StashElement.StashTabContainer.Inventories;
-        var currencyIndex = stashInventories.FindIndex(x => x.Inventory.InvType == InventoryType.CurrencyStash);
+        var currencyIndex = stashInventories.FindIndex(x => x.Inventory != null && x.Inventory.InvType == InventoryType.CurrencyStash);
 
         await SwitchToTab(currencyIndex);
         await TaskUtils.CheckEveryFrameWithThrow(
